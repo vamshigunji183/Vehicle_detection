@@ -1,7 +1,7 @@
 # Vehicle Detection
 ![example_frame](example_images/final_bbox.png)
 
-[Final video output](https://youtu.be/cipgjd5fhWg)
+[Final video output](https://youtu.be/EKicEamm7JU)
 
 ## Overview
 Detect vehicles using HOG + SVM classifier with sliding windows. 
@@ -46,11 +46,9 @@ The above parameters are hard-coded in the file 'settings.py'.
 
 Below is a visualization of the HOG feature extraction as follows.
 
-Vehicle HOG:
-
 ![vehicle_hog](example_images/vehicle_hog.png)
 
-Non-vehicle HOG:
+
 
 ![non_vehicle_hog](example_images/non_vehicle_hog.png)
 
@@ -101,9 +99,6 @@ After a heat map is generated, we threshold the heatmap into a binary image, the
 ![final_bbox](example_images/final_bbox.png)
 
 The above illustrations is on a static image. However, in a video stream, we can take advantage of the temporal correlation between video frames. The number of false positives can be reduced by keeping track of cumulative heatmaps over past 30 frames in the video and threshold the cumulative heatmaps using `HotWindows`.
-
-
-
 
 ## Final video output
 [Here](https://youtu.be/cipgjd5fhWg) is the final video output on Youtube. The same video is 'out.mp4' in this repo. The original video is 'project_video.mp4'.
